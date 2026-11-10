@@ -111,43 +111,9 @@ textarea:focus-visible {
     margin-left: 10px;
 }
 
-.bar {
-    position: sticky;
-    top: env(safe-area-inset-top, 0px);
-    z-index: 1000;
-    width: calc(100% - 2rem);
-    max-width: 860px;
-    margin: 20px auto 0;
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: #ffffff;
-    border-radius: 1.2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
-.track {
-    flex: 1;
-    height: 8px;
-    overflow: hidden;
-    background: var(--line);
-    border-radius: 10px;
-}
 
-.fill {
-    width: 0;
-    height: 100%;
-    background: var(--ok);
-    border-radius: 10px;
-    transition: width 0.3s;
-}
 
-#pct {
-    min-width: 92px;
-    font-size: 14px;
-    text-align: right;
-}
 
 .sheet {
     width: calc(100% - 2rem);
@@ -227,9 +193,12 @@ textarea {
     font-family: monospace;
 }
 
-.list,
-.sign {
+.list {
     min-width: 560px;
+}
+
+.sign {
+    min-width: 700px;
 }
 
 .list thead th,
@@ -297,8 +266,49 @@ textarea {
     width: 150px;
 }
 
-.sign input {
+.sign th:nth-child(3) {
+    width: 90px;
+}
+
+.sign th:nth-child(4) {
+    width: 230px;
+}
+
+.sign th:nth-child(5) {
+    width: 130px;
+}
+
+.sign input,
+.sign select {
     padding: 12px 10px;
+}
+
+.signature {
+    padding: 8px;
+    text-align: center;
+}
+
+.pad {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    border: 1px dashed var(--line);
+    border-radius: 4px;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+.clear {
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--button);
+    background: var(--bg);
+    border: 1px solid var(--line);
+}
+
+.clear:hover {
+    background: var(--line);
 }
 
 footer {
@@ -321,6 +331,10 @@ footer {
 
 footer button {
     background: var(--nav);
+}
+
+footer button + button {
+    margin-left: 8px;
 }
 
 footer button:hover {
@@ -375,8 +389,8 @@ footer button:hover {
 
 @media print {
     nav,
-    .bar,
-    footer {
+    footer,
+    .clear {
         display: none;
     }
 

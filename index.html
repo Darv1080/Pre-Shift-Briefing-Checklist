@@ -9,7 +9,7 @@
 	<body>
 		<div class="page-wrapper">
 			<nav>
-				<div class="logo"></div>
+				<div class="logo">AirNav Indonesia</div>
 				<ul id="menuList">
 					<li><button id="prev" aria-label="Hari sebelumnya">‹ Kemarin</button></li>
 					<li><button id="today">Hari ini</button></li>
@@ -18,7 +18,6 @@
 				</ul>
 				<button class="menu-icon" id="menuIcon" aria-label="Menu" aria-expanded="false">☰</button>
 			</nav>
-
 
 			<main class="sheet">
 				<h1 class="section-heading">Pre-Shift Briefing Checklist</h1>
@@ -30,11 +29,11 @@
 					</tr>
 					<tr>
 						<th>Time</th>
-						<td><input id="time" class="utc"  inputmode="numeric"></td>
+						<td><input type="time" id="time"></td>
 					</tr>
 					<tr>
 						<th>Manager on duty</th>
-						<td><input id="mod" autocomplete="name"></td>
+						<td><select id="mod" class="manager" aria-label="Manager on duty"></select></td>
 					</tr>
 					<tr>
 						<th>Shift</th>
@@ -56,79 +55,79 @@
 							<tr class="item" data-i="0">
 								<td class="no">1</td>
 								<td class="subject">Personnel attendance</td>
-								<td class="details"><textarea rows="1" aria-label="Detail Personnel attendance"></textarea></td>
+								<td class="details"><input type="text" aria-label="Detail Personnel attendance" autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked Personnel attendance"></td>
 							</tr>
 							<tr class="item" data-i="1">
 								<td class="no">2</td>
 								<td class="subject">Personnel readiness</td>
-								<td class="details"><textarea rows="1"  aria-label="Detail Personnel readiness"></textarea></td>
+								<td class="details"><input type="text"  aria-label="Detail Personnel readiness" autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked Personnel readiness"></td>
 							</tr>
 							<tr class="item" data-i="2">
 								<td class="no">3</td>
 								<td class="subject">Traffic</td>
-								<td class="details"><textarea rows="1"  aria-label="Detail Traffic"></textarea></td>
+								<td class="details"><input type="text"  aria-label="Detail Traffic" autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked Traffic"></td>
 							</tr>
 							<tr class="item" data-i="3">
 								<td class="no">4</td>
 								<td class="subject">Weather</td>
-								<td class="details"><textarea rows="1"  aria-label="Detail Weather"></textarea></td>
+								<td class="details"><input type="text" aria-label="Detail Weather" autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked Weather"></td>
 							</tr>
 							<tr class="item" data-i="4">
 								<td class="no">5</td>
 								<td class="subject">Facilities</td>
-								<td class="details"><textarea rows="1"  aria-label="Detail Facilities"></textarea></td>
+								<td class="details"><input type="text" aria-label="Detail Facilities" autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked Facilities"></td>
 							</tr>
 							<tr class="item" data-i="5">
 								<td class="no">6</td>
 								<td class="subject">NOTAM</td>
-								<td class="details"><textarea rows="1" aria-label="Detail NOTAM"></textarea></td>
+								<td class="details"><input type="text"  aria-label="Detail NOTAM" autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked NOTAM"></td>
 							</tr>
 							<tr class="item" data-i="6">
 								<td class="no">7</td>
 								<td class="subject">Coordination</td>
-								<td class="details"><textarea rows="1" aria-label="Detail Coordination"></textarea></td>
+								<td class="details"><input type="text"  autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked Coordination"></td>
 							</tr>
 							<tr class="item" data-i="7">
 								<td class="no">8</td>
 								<td class="subject">Special operations</td>
-								<td class="details"><textarea rows="1" placeholder="" aria-label="Detail Special operations"></textarea></td>
+								<td class="details"><input type="text" placeholder="" aria-label="Detail Special operations" autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked Special operations"></td>
 							</tr>
 							<tr class="item" data-i="8">
 								<td class="no">9</td>
 								<td class="subject">Special procedures in effect</td>
-								<td class="details"><textarea rows="1" placeholder="" aria-label="Detail Special procedures in effect"></textarea></td>
+								<td class="details"><input type="text" placeholder="" aria-label="Detail Special procedures in effect" autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked Special procedures in effect"></td>
 							</tr>
 							<tr class="item" data-i="9">
 								<td class="no">10</td>
 								<td class="subject">Personnel allocation</td>
-								<td class="details"><textarea rows="1" placeholder="" aria-label="Detail Personnel allocation"></textarea></td>
+								<td class="details"><input type="text" placeholder="" aria-label="Detail Personnel allocation" autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked Personnel allocation"></td>
 							</tr>
 							<tr class="item" data-i="10">
 								<td class="no">11</td>
 								<td class="subject">Focus session</td>
-								<td class="details"><textarea rows="1" placeholder="" aria-label="Detail Focus session"></textarea></td>
+								<td class="details"><input type="text" placeholder="" aria-label="Detail Focus session" autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked Focus session"></td>
 							</tr>
 							<tr class="item" data-i="11">
 								<td class="no">12</td>
 								<td class="subject">Closing confirmation</td>
-								<td class="details"><textarea rows="1" placeholder="" aria-label="Detail Closing confirmation"></textarea></td>
+								<td class="details"><input type="text" placeholder="" aria-label="Detail Closing confirmation" autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked Closing confirmation"></td>
 							</tr>
 							<tr class="item" data-i="12">
 								<td class="no">13</td>
 								<td class="subject">Others</td>
-								<td class="details"><textarea rows="1" placeholder="" aria-label="Detail Others"></textarea></td>
+								<td class="details"><input type="text" placeholder="" aria-label="Detail Others" autocomplete="off"></td>
 								<td class="check"><input type="checkbox" aria-label="Checked Others"></td>
 							</tr>
 						</tbody>
@@ -149,17 +148,23 @@
 						<tbody>
 							<tr>
 								<th class="role">Outgoing Manager</th>
-								<td><input data-k="outName" aria-label="Nama Outgoing Manager"></td>
+								<td><select data-k="outName" class="manager" aria-label="Nama Outgoing Manager"></select></td>
 								<td><input data-k="outInit" maxlength="4" aria-label="Initial Outgoing Manager"></td>
-								<td><input data-k="outSign" aria-label="Tanda tangan Outgoing Manager"></td>
-								<td><input data-k="outTime" class="utc" placeholder="06:50" aria-label="Waktu Outgoing Manager"></td>
+								<td class="signature">
+									<canvas class="pad" width="400" height="120" data-sign="outSign" aria-label="Tanda tangan Outgoing Manager"></canvas>
+									<button type="button" class="clear" data-clear="outSign">Hapus</button>
+								</td>
+								<td><input type="time" data-k="outTime" aria-label="Waktu Outgoing Manager"></td>
 							</tr>
 							<tr>
 								<th class="role">Incoming Manager</th>
-								<td><input data-k="inName" aria-label="Nama Incoming Manager"></td>
+								<td><select data-k="inName" class="manager" aria-label="Nama Incoming Manager"></select></td>
 								<td><input data-k="inInit" maxlength="4" aria-label="Initial Incoming Manager"></td>
-								<td><input data-k="inSign" aria-label="Tanda tangan Incoming Manager"></td>
-								<td><input data-k="inTime" class="utc" placeholder="06:50" aria-label="Waktu Incoming Manager"></td>
+								<td class="signature">
+									<canvas class="pad" width="400" height="120" data-sign="inSign" aria-label="Tanda tangan Incoming Manager"></canvas>
+									<button type="button" class="clear" data-clear="inSign">Hapus</button>
+								</td>
+								<td><input type="time" data-k="inTime" aria-label="Waktu Incoming Manager"></td>
 							</tr>
 						</tbody>
 					</table>
@@ -168,9 +173,10 @@
 
 			<footer>
 				<div class="footer-content">
-					<h2></h2>
-					<p id="status"></p>
+					<h2>AirNav Indonesia</h2>
+					<p id="status">Tersimpan otomatis di perangkat ini.</p>
 					<button id="reset">Kosongkan hari ini</button>
+					<button id="clearHistory">Hapus riwayat ketikan</button>
 				</div>
 				<p class="footer-credit">Pre-Shift Briefing Checklist</p>
 			</footer>
