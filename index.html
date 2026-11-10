@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+		<title>Pre-Shift Briefing Checklist</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="page-wrapper">
+			<nav>
+				<div class="logo"></div>
+				<ul id="menuList">
+					<li><button id="prev" aria-label="Hari sebelumnya">‹ Kemarin</button></li>
+					<li><button id="today">Hari ini</button></li>
+					<li><button id="next" aria-label="Hari berikutnya">Besok ›</button></li>
+					<li><button id="print" class="p">Cetak / Simpan PDF</button></li>
+				</ul>
+				<button class="menu-icon" id="menuIcon" aria-label="Menu" aria-expanded="false">☰</button>
+			</nav>
+
+
+			<main class="sheet">
+				<h1 class="section-heading">Pre-Shift Briefing Checklist</h1>
+
+				<table class="info">
+					<tr>
+						<th>Date</th>
+						<td><input type="date" id="date"></td>
+					</tr>
+					<tr>
+						<th>Time</th>
+						<td><input id="time" class="utc"  inputmode="numeric"></td>
+					</tr>
+					<tr>
+						<th>Manager on duty</th>
+						<td><input id="mod" autocomplete="name"></td>
+					</tr>
+					<tr>
+						<th>Shift</th>
+						<td><select id="shift"><option value=""></option><option>I</option><option>II</option><option>III</option></select></td>
+					</tr>
+				</table>
+
+				<div class="scroll">
+					<table class="list" id="list">
+						<thead>
+							<tr>
+								<th class="no">No.</th>
+								<th>Subject</th>
+								<th>Details</th>
+								<th>Checked/ Remarks</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="item" data-i="0">
+								<td class="no">1</td>
+								<td class="subject">Personnel attendance</td>
+								<td class="details"><textarea rows="1" aria-label="Detail Personnel attendance"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked Personnel attendance"></td>
+							</tr>
+							<tr class="item" data-i="1">
+								<td class="no">2</td>
+								<td class="subject">Personnel readiness</td>
+								<td class="details"><textarea rows="1"  aria-label="Detail Personnel readiness"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked Personnel readiness"></td>
+							</tr>
+							<tr class="item" data-i="2">
+								<td class="no">3</td>
+								<td class="subject">Traffic</td>
+								<td class="details"><textarea rows="1"  aria-label="Detail Traffic"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked Traffic"></td>
+							</tr>
+							<tr class="item" data-i="3">
+								<td class="no">4</td>
+								<td class="subject">Weather</td>
+								<td class="details"><textarea rows="1"  aria-label="Detail Weather"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked Weather"></td>
+							</tr>
+							<tr class="item" data-i="4">
+								<td class="no">5</td>
+								<td class="subject">Facilities</td>
+								<td class="details"><textarea rows="1"  aria-label="Detail Facilities"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked Facilities"></td>
+							</tr>
+							<tr class="item" data-i="5">
+								<td class="no">6</td>
+								<td class="subject">NOTAM</td>
+								<td class="details"><textarea rows="1" aria-label="Detail NOTAM"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked NOTAM"></td>
+							</tr>
+							<tr class="item" data-i="6">
+								<td class="no">7</td>
+								<td class="subject">Coordination</td>
+								<td class="details"><textarea rows="1" aria-label="Detail Coordination"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked Coordination"></td>
+							</tr>
+							<tr class="item" data-i="7">
+								<td class="no">8</td>
+								<td class="subject">Special operations</td>
+								<td class="details"><textarea rows="1" placeholder="" aria-label="Detail Special operations"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked Special operations"></td>
+							</tr>
+							<tr class="item" data-i="8">
+								<td class="no">9</td>
+								<td class="subject">Special procedures in effect</td>
+								<td class="details"><textarea rows="1" placeholder="" aria-label="Detail Special procedures in effect"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked Special procedures in effect"></td>
+							</tr>
+							<tr class="item" data-i="9">
+								<td class="no">10</td>
+								<td class="subject">Personnel allocation</td>
+								<td class="details"><textarea rows="1" placeholder="" aria-label="Detail Personnel allocation"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked Personnel allocation"></td>
+							</tr>
+							<tr class="item" data-i="10">
+								<td class="no">11</td>
+								<td class="subject">Focus session</td>
+								<td class="details"><textarea rows="1" placeholder="" aria-label="Detail Focus session"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked Focus session"></td>
+							</tr>
+							<tr class="item" data-i="11">
+								<td class="no">12</td>
+								<td class="subject">Closing confirmation</td>
+								<td class="details"><textarea rows="1" placeholder="" aria-label="Detail Closing confirmation"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked Closing confirmation"></td>
+							</tr>
+							<tr class="item" data-i="12">
+								<td class="no">13</td>
+								<td class="subject">Others</td>
+								<td class="details"><textarea rows="1" placeholder="" aria-label="Detail Others"></textarea></td>
+								<td class="check"><input type="checkbox" aria-label="Checked Others"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="scroll">
+					<table class="sign">
+						<thead>
+							<tr>
+								<th>Role</th>
+								<th>Name</th>
+								<th>Initial</th>
+								<th>Signature</th>
+								<th>Time</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="role">Outgoing Manager</th>
+								<td><input data-k="outName" aria-label="Nama Outgoing Manager"></td>
+								<td><input data-k="outInit" maxlength="4" aria-label="Initial Outgoing Manager"></td>
+								<td><input data-k="outSign" aria-label="Tanda tangan Outgoing Manager"></td>
+								<td><input data-k="outTime" class="utc" placeholder="06:50" aria-label="Waktu Outgoing Manager"></td>
+							</tr>
+							<tr>
+								<th class="role">Incoming Manager</th>
+								<td><input data-k="inName" aria-label="Nama Incoming Manager"></td>
+								<td><input data-k="inInit" maxlength="4" aria-label="Initial Incoming Manager"></td>
+								<td><input data-k="inSign" aria-label="Tanda tangan Incoming Manager"></td>
+								<td><input data-k="inTime" class="utc" placeholder="06:50" aria-label="Waktu Incoming Manager"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</main>
+
+			<footer>
+				<div class="footer-content">
+					<h2></h2>
+					<p id="status"></p>
+					<button id="reset">Kosongkan hari ini</button>
+				</div>
+				<p class="footer-credit">Pre-Shift Briefing Checklist</p>
+			</footer>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
